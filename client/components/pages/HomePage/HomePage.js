@@ -306,7 +306,7 @@ export default function HomePage() {
       />
       <br></br>
       <div>
-        <span className={classes.span1}>Exclusive Restaurants</span>
+        <span className={classes.span1}> Restaurants</span>
       </div>
 
       <div className={classes.root}>
@@ -397,7 +397,7 @@ export default function HomePage() {
           <EmptyStateAnimation>
             <Lottie options={EmptyLottieOptions} width={350} height={350} />
             <EmptyStateText>
-              No Restarants Found. Please search for a different one.
+              No Restarants Found. Please search again.
             </EmptyStateText>
           </EmptyStateAnimation>
         )}
@@ -413,10 +413,11 @@ export default function HomePage() {
             />
             <BannerText>
               <FeatureAnimationTitle>
-                It’s all here. All in one app.
+                It’s all here.
               </FeatureAnimationTitle>
               <FeatureAnimationDescription>
-                Discover local, on-demand delivery or Pickup from restaurants
+              When you crave for midnight delicacy, just dial our number.
+              <p>We deliver food and only good food and have quicker delivery with us.</p>
               </FeatureAnimationDescription>
             </BannerText>
           </FeatureAnimationIcon>
@@ -431,7 +432,7 @@ export default function HomePage() {
         </BannerText>
         <BannerImage>
           <img
-            src='https://cdn.doordash.com/media/consumer/home/landing/new/all_in_one.jpg'
+            src='https://res.cloudinary.com/jerrick/image/upload/v1643114650/61eff09a1de05b001ddf45a1.jpg'
             alt='Banner 1'
           />
         </BannerImage>
@@ -439,7 +440,7 @@ export default function HomePage() {
       <BannerCards>
         <BannerImage>
           <img
-            src='https://img.cdn4dd.com/cdn-cgi/image/fit=contain,width=1600,format=auto,quality=50/https://cdn.doordash.com/media/consumer/home/landing/new/ev_fla_wel_alt.jpg'
+            src='https://expatliving.sg/wp-content/uploads/2019/08/atrium-restaurant-holiday-inn-singapore.jpg'
             alt='Banner 2'
           />
         </BannerImage>
@@ -447,7 +448,7 @@ export default function HomePage() {
           <BannerTitle>Every Flavor Welcome</BannerTitle>
           <BannerDescription>
             From your neighborhood sushi spot to the burger and fries you crave,
-            choose from over 300,000 local and national favorites across the U.S
+            choose from over 500,000 local favorites across the U.S
           </BannerDescription>
         </BannerText>
       </BannerCards>

@@ -11,10 +11,12 @@ import styled from 'styled-components'
 const PayPalButton = paypal.Buttons.driver('react', { React, ReactDOM })
 
 import ReactDOM from 'react-dom'
+//mport { usePayPalScriptReducer } from '@paypal/react-paypal-js'
 
 // const dispatch = useDispatch()
 let productList = [{}]
 let menu = []
+
 
 const { user } = R.pick(['user'])
 console.log('UU ', user)
@@ -232,6 +234,8 @@ class MenuList extends React.Component {
     console.log('ID ', localStorage.getItem('id'))
     this.calculateTotal = this.calculateTotal.bind(this)
     this.order = this.order.bind(this)
+    
+    // {isResolved?alert("Successfull"):null}
   }
 
   componentDidMount() {
@@ -303,6 +307,7 @@ class MenuList extends React.Component {
   }
 
   onApprove(data, actions) {
+    debugger;
     //console.log("fcvgbhnjmk,l.///////")
     return actions.order.capture()
   }
@@ -335,13 +340,16 @@ class MenuList extends React.Component {
             {products}
             <Total total={this.state.total} />
             <br></br>
+            
             {/* <Button variant='primary' onClick={this.order}>Order Now</Button>{' '} */}
+
             {this.state.total > 0 && (
               <PayPalButton
                 createOrder={(data, actions) => this.createOrder(data, actions)}
                 onApprove={(data, actions) => this.onApprove(data, actions)}
               />
             )}
+
           </Col>
           <Col>
             <GoogleMap1 address={this.state.address} name={this.state.name}/>

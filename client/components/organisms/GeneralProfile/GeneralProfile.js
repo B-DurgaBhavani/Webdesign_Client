@@ -48,23 +48,23 @@ export default function GeneralProfile() {
     setResProfilePicEdited('');
   };
 
-  
+
   useEffect(() => {
     console.log("useEffect called!");
     const getRestaurantsInfo = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:8080/api/res/getRestaurantInfo/"+user.restaurantID,
+          "http://localhost:8080/api/res/getRestaurantInfo/" + user.restaurantID,
         ).then(res => {
-        console.log("response", res)
-        setResName(res.data.restaurants[0].restaurantName);
-        setResLocation(res.data.restaurants[0].location);
-        setResAddress(res.data.restaurants[0].address);
-        setResZipCode(res.data.restaurants[0].pincode);
-        setProfilePic(res.data.restaurants[0].profilePic);
-        console.log("Name ",res.data.restaurants[0].restaurantName);
+          console.log("response", res)
+          setResName(res.data.restaurants[0].restaurantName);
+          setResLocation(res.data.restaurants[0].location);
+          setResAddress(res.data.restaurants[0].address);
+          setResZipCode(res.data.restaurants[0].pincode);
+          setProfilePic(res.data.restaurants[0].profilePic);
+          console.log("Name ", res.data.restaurants[0].restaurantName);
         })
-      } catch (e) { 
+      } catch (e) {
         console.log(e);
       }
     };
@@ -80,7 +80,7 @@ export default function GeneralProfile() {
   };
 
   const updateRestaurantName = e => {
-    if(validateName(e.target.value)){
+    if (validateName(e.target.value)) {
       setResName(e.target.value);
       setResNameEdited(true);
     }
@@ -128,14 +128,14 @@ export default function GeneralProfile() {
   const edited = resNameEdited || resAddressEdited || resZipCodeEdited || resLocationEdited;
   console.log("Step 2")
   return (
-  
+
 
     <Box className="general-profile">
       <Icon size="medium" className="is-pulled-right" onClick={refresh} onKeyPress={refresh}>
         <FontAwesomeIcon icon={faSync} size="lg" />
       </Icon>
       <Title size="3">
-        Restaurant Information
+        Restaurant Details
       </Title>
       <hr className="separator" />
       <Columns>
@@ -181,27 +181,27 @@ export default function GeneralProfile() {
                 </Control>
               </Field>
             </Column>
-            </Columns>
+          </Columns>
           <Columns>
-          <Column size="6">
-          <Field>
-            <Label htmlFor="bio">
-              Restaurant Address
-            </Label>
-            <Control>
-              <Input
-                id="bio"
-                placeholder="Address"
-                value={address}
-                maxLength={240}
-                onChange={updateRestaurantAddress}
-              />
-            </Control>
-            <Help>
-              {`Characters remaining: ${charactersRemaining}`}
-            </Help>
-          </Field>
-          </Column>
+            <Column size="6">
+              <Field>
+                <Label htmlFor="bio">
+                  Restaurant Address
+                </Label>
+                <Control>
+                  <Input
+                    id="bio"
+                    placeholder="Address"
+                    value={address}
+                    maxLength={240}
+                    onChange={updateRestaurantAddress}
+                  />
+                </Control>
+                <Help>
+                  {`Characters remaining: ${charactersRemaining}`}
+                </Help>
+              </Field>
+            </Column>
           </Columns>
           <Columns>
             <Column size="3">
@@ -234,7 +234,7 @@ export default function GeneralProfile() {
                 </Control>
               </Field>
             </Column>
-            </Columns>
+          </Columns>
         </Column>
       </Columns>
       <hr className="separator" />

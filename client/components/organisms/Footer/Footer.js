@@ -35,7 +35,7 @@ export default function FooterComponent() {
           <MDBRow className='text-center text-md-left mt-3 pb-3'>
             <MDBCol md='3' lg='3' xl='3' className='mx-auto mt-3'>
               <h6 className='text-uppercase mb-4 font-weight-bold'>
-                Delivering smiles all the time!
+              Just order and we’ll be at your door!
               </h6>
               <p>
                 We make sure our Partners follow the standards set by Food and
@@ -52,9 +52,6 @@ export default function FooterComponent() {
                 <a href='#!'>Sushi Near Me</a>
               </p>
               <p>
-                <a href='#!'>SeaFood Near Me</a>
-              </p>
-              <p>
                 <a href='#!'>Coffee Near Me</a>
               </p>
             </MDBCol>
@@ -67,9 +64,6 @@ export default function FooterComponent() {
                 <a href='#!'>Become an Affiliate</a>
               </p>
               <p>
-                <a href='#!'>Account Details</a>
-              </p>
-              <p>
                 <a href='#!'>Help</a>
               </p>
             </MDBCol>
@@ -80,13 +74,13 @@ export default function FooterComponent() {
                 <i className='fa fa-home mr-3' /> Boston, MA 02120, US
               </p>
               <p>
-                <i className='fa fa-envelope mr-3' /> info@fooddelivery.com
+                <i className='fa fa-envelope mr-3' /> hdinfo@fooddelivery.com
               </p>
               <p>
-                <i className='fa fa-phone mr-3' /> + 01 234 567 88
+                <i className='fa fa-phone mr-3' /> + 97 234 888 88
               </p>
               <p>
-                <i className='fa fa-print mr-3' /> + 01 234 567 89
+                <i className='fa fa-print mr-3' /> + 97 234 888 89
               </p>
             </MDBCol>
           </MDBRow>

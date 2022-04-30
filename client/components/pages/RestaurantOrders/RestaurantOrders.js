@@ -116,7 +116,7 @@ console.log("Testing Date", new Date(date).toString().split(' GMT')[0])
               <Table size="small" aria-label="purchases">
                 <TableHead>
                   <TableRow>
-                    <TableCell>Menu Item</TableCell>
+                    <TableCell>Item</TableCell>
                     <TableCell>Quantity</TableCell>
                    
                   </TableRow>

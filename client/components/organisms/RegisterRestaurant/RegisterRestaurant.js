@@ -214,7 +214,7 @@ export default function RegisterRestaurant() {
         </Control>
       </Field>
       <Field>
-        <Label htmlFor='address'>Restaurant Address</Label>
+        <Label htmlFor='address'> Address</Label>
         <Control iconsRight>
           <Input
             id='address'
@@ -227,7 +227,7 @@ export default function RegisterRestaurant() {
         </Control>
       </Field>
       <Field>
-        <Label htmlFor='pincode'>Restaurant Zipcode</Label>
+        <Label htmlFor='pincode'> Zipcode</Label>
         <Control iconsRight>
           <Input
             id='pincode'
@@ -240,7 +240,7 @@ export default function RegisterRestaurant() {
         </Control>
       </Field>
       <Field>
-        <Label htmlFor='location'>Restaurant Location(City)</Label>
+        <Label htmlFor='location'> Location(City)</Label>
         <Control iconsRight>
           <Input
             id='location'
@@ -253,7 +253,7 @@ export default function RegisterRestaurant() {
         </Control>
       </Field>
       <Field>
-        <Label htmlFor='file'>Attach a Restaurant Image</Label>
+        <Label htmlFor='file'>Restaurant Image</Label>
         <Control iconsRight>
           <Input
             id='profilePic'

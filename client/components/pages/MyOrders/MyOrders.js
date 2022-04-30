@@ -29,6 +29,12 @@ const useRowStyles = makeStyles({
       fontSize: '1vh',
     },
   },
+
+  orders: {
+    TableCell: {
+      fontSize: '30px',
+    }
+  }
 })
 const MenuItemWrapper = styled.div`
   display: flex;
@@ -200,8 +206,11 @@ Row.propTypes = {
 
 export default function MyOrders() {
   const [order, setOrders] = useState()
+  
 
   const { user } = useSelector(R.pick(['user']))
+
+  const classes = useRowStyles()
 
   useEffect(() => {
     console.log('useEffect called')
@@ -222,16 +231,16 @@ export default function MyOrders() {
   return (
     <TableContainer component={Paper}>
       <Table aria-label='collapsible table'>
-        <TableHead>
-          <TableRow>
+        <TableHead style={{background:"burlywood"}}>
+          <TableRow className={classes.orders}>
             <TableCell />
-            <TableCell>Restaurant Name</TableCell>
-            <TableCell align='right'>Order Date</TableCell>
-            <TableCell align='right'>Total</TableCell>
-            <TableCell align='right'>Status</TableCell>
+            <TableCell style={{fontSize:"20px"}} >Restaurant Name</TableCell>
+            <TableCell style={{fontSize:"20px"}} align='right'>Order Date</TableCell>
+            <TableCell style={{fontSize:"20px"}} align='right'>Total</TableCell>
+            <TableCell style={{fontSize:"20px"}} align='right'>Status</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody style={{background:"lavender"}}>
           {order != undefined &&
             order.map((row) => <Row key={row._id} row={row} />)}
         </TableBody>
